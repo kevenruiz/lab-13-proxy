@@ -1,4 +1,4 @@
-export default characters;
+/*export default characters;
 let characters = [
   {
     name: 'Eddard',
@@ -43,3 +43,4 @@ let characters = [
     house: 'Snow'
   }
 ];
+*/
