@@ -1,6 +1,6 @@
-export default {
-  'page': 1,
-  'results': [
+/* eslint-disable indent */
+const LocationData =
+  [
     {
       'place_id': '227547364',
       'licence': 'https://locationiq.com/attribution',
@@ -111,4 +111,5 @@ export default {
       'icon': 'https://locationiq.org/static/images/mapicons/money_bank2.p.20.png'
     }
   ]
-};
+  ;
+export default LocationData;

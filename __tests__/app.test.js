@@ -1,12 +1,12 @@
-import formatLocation from '../lib/munge-utils';
-import LocationData from '../data/location-data';
+import { formatLocation } from '../lib/munge-utils.js';
+import LocationData from '../data/location-data.js';
 
 describe('API Data Munging', () => {
 
   const expectedLocation =
 
   {
-    'formatted_query': 'Avenida Calle 30, Barranquillita, Barranquilla, Atlántico',
+    'formatted_query': 'Avenida Calle 30, Barranquillita, Barranquilla, Atlántico, Caribe, 080004, Colombia',
     'latitude': '10.9777174',
     'longitude': '-74.7765211'
   }
