@@ -23,7 +23,7 @@ describe('API Data Munging', () => {
     const output = formatLocation(LocationData);
 
     // assert
-    expect(output[0]).toEqual(expectedLocation);
+    expect(output).toEqual(expectedLocation);
   });
 
 
