@@ -1,6 +1,7 @@
-import { formatLocation, formatWeather } from '../lib/munge-utils.js';
+import { formatLocation, formatWeather, formatYelp } from '../lib/munge-utils.js';
 import LocationData from '../data/location-data.js';
 import WeatherData from '../data/weather-data.js';
+import YelpData from '../data/yelp-data.js';
 
 describe('API Data Munging', () => {
 
@@ -18,7 +19,7 @@ describe('API Data Munging', () => {
   it('munges location data', async () => {
     // arrange
     // expected is in variable above
-    // movieData is imported from file
+
 
     // act 
     const output = formatLocation(LocationData);
@@ -38,7 +39,6 @@ describe('API Data Munging', () => {
   it('munges weather data', async () => {
     // arrange
     // expected is in variable above
-    // movieData is imported from file
 
     // act 
     const output = formatWeather(WeatherData);
@@ -50,3 +50,26 @@ describe('API Data Munging', () => {
 
 
 });
+
+const expectedYelp =
+
+{
+  'img_url': undefined,
+  'name': 'Screen Door - Eastside',
+  'price': '$$',
+  'rating': 4.5,
+  'url': 'https://www.yelp.com/biz/screen-door-eastside-portland?adjust_creative=F0oDWU4p051XqPkRppRgBQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=F0oDWU4p051XqPkRppRgBQ'
+};
+
+
+it('munges Yelp data', async () => {
+
+  // act 
+  const output = formatYelp(YelpData);
+
+  // assert
+  expect(output[0]).toEqual(expectedYelp);
+});
+
+
+
